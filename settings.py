@@ -13,7 +13,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_CONFIG = os.path.join(ROOT_DIR, 'logging.yml')
 
 STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
-t
+
 DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
 if not DOWNLOADS_PATH.is_dir():
     DOWNLOADS_PATH.mkdir()
