@@ -109,7 +109,7 @@ def main():
     """, unsafe_allow_html=True)
     if choice == "Инфо":
         st.markdown("<h5 style='text-align: center'>Распознавание и верификация лиц</h5>", unsafe_allow_html=True)
-        st.image('iamges/2.jpg')
+        st.image('images/2.jpg')
         st.markdown("<h6 style='text-align: center'>О проекте</h6>", unsafe_allow_html=True)
         st.write("""Приложение создано не только ради забавы и тестирования в ЦАР, 
 но и для возможной реализации в банке""")
