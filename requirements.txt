@@ -1,0 +1,10 @@
+wheel
+numpy==1.24.3
+pandas==1.5.3 
+plotly
+opencv-python-headless==4.5.4.60
+cmake
+dlib-bin
+face_recognition @ git+https://github.com/thetoby9944/face_recognition
+streamlit
+streamlit_option_menu
