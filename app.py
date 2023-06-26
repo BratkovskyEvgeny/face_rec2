@@ -15,9 +15,9 @@ PAGE_TITLE: str = "Распознавание лиц работников сли
 PAGE_ICON: str = "🤖"
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
-with open('data/matrix.js') as f:
+with open('Data/matrix.js') as f:
     html_string = f.read()
-with open('data/matrix2.js') as a:
+with open('Data/matrix2.js') as a:
     html_string2 = a.read()
 ##components.html(html_string)  # JavaScript 
 
