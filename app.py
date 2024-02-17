@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-PAGE_TITLE: str = "Распознавание лиц работников слишком известного центра :)"
+PAGE_TITLE: str = "Распознавание и верификация лиц"
 PAGE_ICON: str = "🤖"
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -140,7 +140,7 @@ def main():
                 st.markdown("<h5 style='text-align: center'>Авторизация завершена успешно</h5>", unsafe_allow_html=True)
                 components.html(html_string)
                 selected_menu = option_menu(None,
-                                            ['Идентификация', 'История', 'БД', 'Жэстачайшэ удалить'],
+                                            ['Идентификация', 'История', 'БД', 'Удалить данные'],
                                             icons=['camera', "clock-history", 'person-plus', 'trash'],
                                             ## icons from website: https://icons.getbootstrap.com/
                                             menu_icon="cast", default_index=0, orientation="horizontal",
@@ -152,7 +152,7 @@ def main():
                                                              "color": '#cbe4de'}
                                             }
                                             )
-                if selected_menu == 'Жэстачайшэ удалить':
+                if selected_menu == 'Удалить данны':
                     st.markdown('''
                         <style>
                         .st-b7 {
@@ -162,7 +162,7 @@ def main():
                         }
                         </style>
                         ''', unsafe_allow_html=True)
-                    st.success('Всё удалено к чертям собачим :)')
+                    st.success('Все данные успешно удалены')
                     shutil.rmtree(VISITOR_DB, ignore_errors=True)
                     os.mkdir(VISITOR_DB)
                     
@@ -329,7 +329,7 @@ def main():
                                         st.image(BGR_to_RGB(image_array_copy), width=720)
 
                             else:
-                                st.error('Лица не нашёл. А человек ли на фото, а ?')
+                                st.error('Попробуйте еще раз. Нечеткая идентификация силуэта лица.')
 
                 if selected_menu == 'История':
                     view_attendace()
